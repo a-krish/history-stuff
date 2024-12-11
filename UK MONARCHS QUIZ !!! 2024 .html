@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>UK MONARCHS QUIZ !!!</title>
+<h1>UK MONARCHS QUIZ !!!</h1>
+
+      <script type="text/javascript">
+
+          
+  alert("This alert box was called with the onload event");
+
+ function displayAnswer(txt_ans,btn_sa,btn_ha) {
+         var text = document.getElementById(txt_ans);
+         text.style.display = "block";
+         var button1=document.getElementById(btn_sa);
+         var button2=document.getElementById(btn_ha);
+         /*button1.style.display"block"*/
+         button2.style.display="none"
+         }
+         
+                   function hideAnswer(txt_ans,btn_sa,btn_ha) {
+         var text = document.getElementById(txt_ans);
+         text.style.display = "none";
+                       var button1=document.getElementById(btn_ha);
+         var button2=document.getElementById(btn_sa);
+         button1.style.display="none"
+         button2.style.display="block"
+         }
+</script>
+    </head>  
+   <body>
+      <h2>There are 8 questions</h2>
+      <ul>
+         <li>
+            Who defeated Harold ii at the battle of hastings?
+            <div>
+               <button id="sa1" onclick="displayAnswer('answer1','sa1','ha1')">Show Answer</button>
+               <button id="ha1" style="display: none" onclick="hideAnswer('answer1','sa1','ha1')">Hide Answer</button>
+            </div>
+            <div id="answer1" style="display: none; color:red">
+               William the conqeror
+            </div>
+         </li>
+         <li>
+            Who chopped of King Charles i's head? 
+            <div>
+               <button id="sa2" onclick="displayAnswer('answer2','sa2','ha2')">Show Answer</button>
+               <button id="ha2" style="display: none" onclick="hideAnswer('answer2','sa2','ha2')">Hide Answer</button>
+            </div>
+            <div id="answer2" style="display: none; color:red">
+               Oliver Cromwell
+            </div>
+         </li>
+         <li>
+            Who were the Tudors? 
+            <div>
+               <button id="sa3" onclick="displayAnswer('answer3','sa3','ha3')">Show Answer</button>
+               <button id="ha3" style="display: none" onclick="hideAnswer('answer3','sa3','ha3')">Hide Answer</button>
+            </div>
+            <div id="answer3" style="display: none; color:red">
+               They were people who liked beheading first tudor was henry vii
+            </div>
+         </li>
+         <li>
+            Name the last rulers of uk from George i. 
+            <div>
+               <button id="sa4" onclick="displayAnswer('answer4','sa4','ha4')">Show Answer</button>
+               <button id="ha4" style="display: none" onclick="hideAnswer('answer4','sa4','ha4')">Hide Answer</button>
+            </div>
+            <div id="answer4" style="display: none; color:red">
+               george i, george ii, george iii, george iv, william iv, victoria, edward vii, george v,endward viii, george vi, elizabeth ii, charles iii
+            </div>
+         </li>
+         <li>
+            Which king defeated napoleon bonaparte? 
+            <div>
+               <button id="sa5" onclick="displayAnswer('answer5','sa5','ha5')">Show Answer</button>
+               <button id="ha5" style="display: none" onclick="hideAnswer('answer5','sa5','ha5')">Hide Answer</button>
+            </div>
+            <div id="answer5" style="display: none; color:red">
+               George iii
+            </div>
+         </li>
+         <li>
+            Who started the Anarchy by dying? 
+            <div>
+               <button id="sa6" onclick="displayAnswer('answer6','sa6','ha6')">Show Answer</button>
+               <button id="ha6" style="display: none" onclick="hideAnswer('answer6','sa6','ha6')">Hide Answer</button>
+            </div>
+            <div id="answer6" style="display: none; color:red">
+               William adelin, prince of england
+            </div>
+         </li>
+         <li>
+            Who executed Lady Jane Grey? 
+            <div>
+               <button id="sa7" onclick="displayAnswer('answer7','sa7','ha7')">Show Answer</button>
+               <button id="ha7" style="display: none" onclick="hideAnswer('answer7','sa7','ha7')">Hide Answer</button>
+            </div>
+            <div id="answer7" style="display: none; color:red">
+               Mary i of england 
+            </div>
+         </li>
+         <li>
+            Which people had the runic alphabet? 
+            <div>
+               <button id="sa8" onclick="displayAnswer('answer8','sa8','ha8')">Show Answer</button>
+               <button id="ha8" style="display: none" onclick="hideAnswer('answer8','sa8','ha8')">Hide Answer</button>
+            </div>
+            <div id="answer8" style="display: none; color:red">
+               The Vikings
+            </div>
+         </li>
+      </ul>
+   </body>
+</html>
