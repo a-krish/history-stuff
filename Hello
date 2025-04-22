@@ -23,6 +23,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 body {
   font-family: 'Arial', sans-serif;
   background: #12043c;
@@ -73,6 +74,7 @@ body {
   font-size: 22px;
   font-weight: bold;
 }
+
 const bots = {
   india: {
     questions: [
