@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>History Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div id="bot-buttons">
+    <div class="bot-button" onclick="switchBot('india')">India</div>
+    <div class="bot-button" onclick="switchBot('china')">China</div>
+    <div class="bot-button" onclick="switchBot('africa')">Africa</div>
+    <div class="bot-button" onclick="switchBot('uk')">UK</div>
+    <div class="bot-button" onclick="switchBot('japan')">Japan</div>
+  </div>
+
+  <div id="questions"></div>
+  <div id="answer"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+body {
+  font-family: 'Arial', sans-serif;
+  background: #12043c;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.bot-button {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  background: linear-gradient(to right, #a86dd8, #f97b47);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.bot-button:hover {
+  transform: scale(1.05);
+}
+
+#questions button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  background: #ff9a7c;
+  color: #12043c;
+  cursor: pointer;
+}
+
+#questions button:hover {
+  background: #ff815b;
+}
+
+#answer {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+const bots = {
+  india: {
+    questions: [
+      { q: "Largest city in 1560?", a: "Vijayanagara." },
+      { q: "Largest mountain in India?", a: "Kangchenjunga." },
+      { q: "What’s India’s national animal?", a: "Bengal Tiger." },
+      { q: "When did India gain independence?", a: "August 15, 1947." }
+    ]
+  },
+  china: {
+    questions: [
+      { q: "Largest city in 1560?", a: "Beijing." },
+      { q: "Largest mountain in China?", a: "Mount Everest." },
+      { q: "What’s the Great Wall’s purpose?", a: "Defense against invasions." },
+      { q: "When was the People’s Republic founded?", a: "October 1, 1949." }
+    ]
+  },
+  africa: {
+    questions: [
+      { q: "Largest city in 1560?", a: "Cairo." },
+      { q: "Richest in 1560?", a: "Askia Muhammad I of the Songhai Empire." },
+      { q: "Longest river in Africa?", a: "Nile River." },
+      { q: "Which desert covers much of north Africa?", a: "Sahara." }
+    ]
+  },
+  uk: {
+    questions: [
+      { q: "Largest city in 1560?", a: "London." },
+      { q: "Richest in 1560?", a: "Queen Elizabeth I." },
+      { q: "What’s the UK’s national flower?", a: "Rose." },
+      { q: "When is UK’s Remembrance Day?", a: "November 11th." }
+    ]
+  },
+  japan: {
+    questions: [
+      { q: "Largest statue in 1985?", a: "The Great Buddha of Kamagaya (completed in 1983)." },
+      { q: "Smallest city in 1342?", a: "Information not well recorded, but small villages like Shirakawa-go existed." },
+      { q: "Name Japan’s highest mountain.", a: "Mount Fuji." },
+      { q: "When is Japan’s Constitution Memorial Day?", a: "May 3rd." }
+    ]
+  }
+};
+
+function switchBot(botName) {
+  const bot = bots[botName];
+  const questionsDiv = document.getElementById("questions");
+  const answerDiv = document.getElementById("answer");
+  questionsDiv.innerHTML = "";
+  answerDiv.innerHTML = "";
+
+  bot.questions.forEach(item => {
+    const btn = document.createElement("button");
+    btn.innerText = item.q;
+    btn.onclick = () => {
+      answerDiv.innerText = item.a;
+    };
+    questionsDiv.appendChild(btn);
+  });
+}
